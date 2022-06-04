@@ -85,3 +85,45 @@ body {
 .video-card:nth-child(4) .video-thumbnail {
   background-image: url("img/aritra-roy-MmtNPjVyRCg-unsplash\ \(1\).jpg");
 }
+
+/* Media Queries */
+
+@media only screen and (max-width: 65rem) {
+  .grid {
+    grid-template-columns: 2rem repeat(6, 1fr) 2rem;
+    gap: 1rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .max-width {
+    grid-column: 2 / span 6;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .video-title {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 50rem) {
+  .grid {
+    grid-template-columns: 1rem repeat(6, 1fr) 1rem;
+  }
+
+  .max-width {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (max-width: 40rem) {
+  .square,
+  .video,
+  .book,
+  .video-card {
+    grid-column: span 6;
+  }
+
+  .video-title {
+    font-size: 1.5rem;
+  }
+}
