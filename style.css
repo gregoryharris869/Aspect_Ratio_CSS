@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 4.2rem)) 1fr;
+  gap: 2rem 2rem;
+  margin: 2rem 0;
+}
+
+.max-width {
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 4.2rem));
+  gap: 2rem 2rem;
+}
+
+.square {
+  grid-column-end: span 3;
+  background-color: lightsalmon;
+  padding-top: calc(1 / 1 * 100%);
+}
+
+.video {
+  grid-column-end: span 3;
+  background-color: lightblue;
+  padding-top: calc(9 / 16 * 100%);
+}
+
+.book {
+  grid-column-end: span 3;
+  background-color: lightgreen;
+  padding-top: calc(1.4 / 1 * 100%);
+}
+
+.video-card {
+  grid-column-end: span 3;
+  background-color: lightpink;
+  padding-top: calc(1 / 1 * 100%);
+  position: relative;
+}
+
+.video-thumbnail {
+  width: 100%;
+  padding-top: calc(9 / 16 * 100%);
+  background-color: lightgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.video-title {
+  font-style: 1rem;
+  width: 90%;
+  position: absolute;
+  top: calc(9 / 16 * 100% + 5%);
+  left: 5%;
+}
+
+.video-card:nth-child(1) .video-thumbnail {
+  background-image: url("img/akshay-bhilare-NTcR7ClzUlQ-unsplash.jpg");
+}
+
+.video-card:nth-child(2) .video-thumbnail {
+  background-image: url("img/alex-quezada-i8vUaSDbqmg-unsplash\ \(1\).jpg");
+}
+
+.video-card:nth-child(3) .video-thumbnail {
+  background-image: url("img/aritra-roy-aXH-wZ7P1gY-unsplash.jpg");
+}
+
+.video-card:nth-child(4) .video-thumbnail {
+  background-image: url("img/aritra-roy-MmtNPjVyRCg-unsplash\ \(1\).jpg");
+}
